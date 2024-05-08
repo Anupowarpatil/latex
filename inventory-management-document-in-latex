@@ -1,0 +1,347 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{array} % Required for custom column type
+\usepackage{multirow} % Required for multirow cells
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+\usepackage{titlesec}
+
+% Customizing section title format
+\titleformat{\section}{\LARGE\bfseries}{\thesection}{2em}{}
+
+
+% Title
+
+\begin{document}
+
+\begin{tcolorbox}[ colframe=black!100, boxrule=2pt,boxsep=10pt, left=1cm,right=1cm,top=1cm,bottom=1cm]
+\begin{center}
+\LARGE {\bfseries D.K.T.E. Society’s Textile and Engineering Institute, Ichalkaranji.}\\
+\vspace{1cm}
+\large (An Autonomous Institute, Affiliated to Shivaji University, Kolhapur)\\
+
+Accredited with ‘A+’ Grade by NAAC\\
+\vspace{1cm}
+\textcolor{violet} {Department of Computer Science and Engineering}\\
+\textcolor{violet}{2023-2024}\\
+\vspace{1cm}
+\large \textcolor{red} {THE SRS AND DESIGN DOCUMENT ON}\\
+\LARGE \textcolor{blue} {\bfseries“Development of Inventory management System”}\\
+\vspace{1cm}
+\includegraphics{Picture1.jpg}\\
+Under the guidance \\
+Of\\
+Mrs. R.S. Kamble\\
+\vspace{1cm}
+Submitted By:	\\
+   	 					      
+\large \textcolor{blue} {PRAJWAL D. TADE 		       \hspace{2cm}              22UAI120}\\
+\large \textcolor{blue} {YUVRAJ M. WANKHEDE		\hspace{2cm}          22UAI132}\\
+\large \textcolor{blue} {PRANITA S. YADAV 			\hspace{2cm}          22UAI135}\\
+\large \textcolor{blue} {PURVA K. POWAR PATIL            \hspace{2cm}                23UAI316}\\
+\end{center}
+\end{tcolorbox}
+\newpage
+\begin{tcolorbox}[ colframe=black!100, boxrule=2pt,boxsep=10pt, left=1cm,right=1cm,top=1cm,bottom=1cm]
+\begin{center}
+\LARGE {\bfseries D.K.T.E. Society’s Textile and Engineering Institute, Ichalkaranji.}\\
+\vspace{1cm}
+\large (An Autonomous Institute, Affiliated to Shivaji University, Kolhapur)\\
+
+Accredited with ‘A+’ Grade by NAAC\\
+\vspace{1cm}
+\textcolor{violet} {Department of Computer Science and Engineering}\\
+\textcolor{violet}{2023-2024}\\
+\LARGE CERTIFICATE\\
+\vspace{0.8cm}
+This is to certify that,\\
+		      
+\large \textcolor{blue} {PRAJWAL D. TADE 		       \hspace{2cm}              22UAI120}\\
+\large \textcolor{blue} {YUVRAJ M. WANKHEDE		\hspace{2cm}          22UAI132}\\
+\large \textcolor{blue} {PRANITA S. YADAV 			\hspace{2cm}          22UAI135}\\
+\large \textcolor{blue} {PURVA K. POWAR PATIL            \hspace{2cm}                23UAI316}\\
+Have successfully completed the SRS and Design work, of the mini project part-II entitled,\\
+
+\LARGE \textcolor{red}{“Development of Inventory management  System”}\\
+
+\large {In partial fulfillment for S.Y.B.Tech. CSE(AI) academics. This is the record of their work carried out during academic year 2023-2024.}   \\
+
+
+  Date:				 \hspace{6cm}				 Place: Ichalkaranji\\
+\vspace{2cm}
+ Mrs.V.B.Sutar-Guide \hspace{2cm}\large EXTERNAL EXAMINER	                                                                                           \\
+\vspace{2cm}
+Prof.Dr.S.K.Shiragave\hspace{2cm}Prof.Dr.L.S.Admuthe\\
+HOD\hspace{7cm}DIRECTOR\\
+\end{center}
+
+\end{tcolorbox}
+\newpage
+
+\section{Index}
+\begin{table}[htbp]
+    \centering
+\resizebox{\textwidth}{125pt}{%
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Sr. No.} & \textbf{Title} & \textbf{Page No.} \\
+    \hline
+    1& Introduction & 2 \\
+    \hline
+    2 & Abstract & 3\\
+    \hline
+    3 & Objective & 4\\
+    \hline
+    4&Problem Statement & 5\\
+    \hline
+     5&Requirement Specification&6\\
+    \hline
+    6&Requirement Analysis& 7\\
+    \hline
+    7&Stakeholder & 4\\
+    \hline
+    8&System Diagram& 5\\
+    \hline
+  \end{tabular}%
+  }
+\end{table}
+
+\newpage
+
+\section{Introduction}
+Inventory management is the strategic process of overseeing and controlling the flow of goods, raw materials, and products within a business. It involves the efficient planning, purchasing, storing, and tracking of inventory to meet customer demand while minimizing costs and maximizing profits. 
+
+At its core, inventory management aims to strike a balance between ensuring that enough stock is available to fulfill orders promptly without overstocking, which ties up capital and increases holding costs. Effective inventory management relies on accurate forecasting, real-time tracking systems, and streamlined processes to optimize inventory levels, reduce stockouts, and minimize the risk of obsolescence.
+
+Key components of inventory management include inventory tracking, demand forecasting, replenishment strategies, and inventory valuation. Modern inventory management systems often leverage technology such as inventory management software, barcode scanners, RFID (Radio Frequency Identification) tags, and advanced analytics to automate processes and enhance efficiency.
+
+Overall, efficient inventory management is crucial for businesses of all sizes and industries to maintain competitiveness, improve customer satisfaction, and achieve sustainable growth.
+
+\newpage
+\section{Abstract}
+
+ For organizations that handle transactions involving consumer goods, an inventory management system is critical for quality control. A huge retail store could run out of supply of a critical item if inventory is not properly managed. When it’s time to reorder, an effective inventory management system will notify the retailer. This inventory management system is also useful for tracking huge shipments automatically. Counting each pair of stocks by hand will almost certainly result in a mistake. The risk of human error can be reduced by using an automated inventory management system.
+
+An Inventory Management System also aids in the tracking of retail product theft, providing useful information regarding store revenues and the need for theft-prevention devices. Scanning a barcode on the item or a barcode scanner is how Automated Inventory Management Systems function. The central computer system then keeps track of this data. The purchase order can also include a list of items that need to be pulled for packaging and shipping. In this situation, the Inventory Management System can perform a range of tasks. It can assist a warehouse worker in locating things on an order list, encoding shipment information such as tracking numbers and delivery addresses and removing purchased items from the inventory tally to maintain a correct count of in-stock items. All of this information works together to give firms real-time inventory tracking data. The simple search in a database makes it easy to find and look at inventory information in real-time.
+\newpage
+
+\section{objective}The objectives of an inventory management system can vary depending on the specific needs and goals of a business, but typically include:
+\begin{itemize}
+\item Optimizing Inventory Levels: Ensure that the right amount of inventory is available to meet customer demand without excessive overstocking or stockouts.
+
+ \item Minimizing Holding Costs: Reduce the costs associated with storing excess inventory, such as warehouse rental fees, insurance, and depreciation.
+
+\item Maximizing Cash Flow: Free up capital that would otherwise be tied up in excess inventory, allowing for investment in other areas of the business or reducing reliance on external financing.
+
+\item Preventing Stockouts: Minimize the occurrence of stockouts by ensuring that inventory levels are sufficient to meet customer demand, particularly for high-demand or critical items.
+
+\item Optimizing Replenishment: Implement efficient replenishment strategies to reorder inventory at the right time and in the right quantities, minimizing excess inventory while ensuring availability.
+
+\item Enhancing Customer Satisfaction: Ensure that products are available when customers want them, leading to higher levels of customer satisfaction and loyalty.
+
+\end{itemize}
+
+\newpage
+
+\section{Problem statement}
+XYZ company operates in retail and faces challenges with manual inventory tracking, leading to stock inaccuracies, delays in order processing, and limited visibility. To address these issues, the company needs an automated Inventory Management System (IMS) to track inventory, streamline order processing, improve visibility, and ensure regulatory compliance.
+
+\section{Describtion of problem}
+Inventory management is challenging due to unpredictable demand and variable lead times. To prevent shortages, managers maintain safety stock. However, determining optimal order quantities and reorder points is complex. The goal is to minimize total inventory costs while ensuring products are available. Failure to manage inventory effectively can result in lost sales or obsolete stock.
+
+\newpage
+
+\section{Requirement Specification}
+\subsection{Functional Requirement}
+\begin{center}
+\begin{table}[htbp]
+
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Sr. No.} & \textbf{Requirement}  &{Description of the Requirement}\\
+    \hline
+    1& Real-time Inventory Updates  &The system should update \\&&inventory levels in real-time as\\&& products are added, sold, or returned.\\
+    \hline
+    2 & Stock Movement Tracking &Track the movement of stock, including 
+transfers between\\&& locations, adjustments for damages or losses, and\\&&
+ returns from customers.\\
+    \hline
+    3 & Batch and Serial Number Tracking & Ability to track inventory by\\&&
+ batch numbers or serial numbers\\&& for traceability and quality control.\\
+    \hline
+    4&Order Processing&Process customer orders efficiently, including \\&&
+order entry, validation, and confirmation.\\
+    \hline
+     5&Order Fulfillmen& Manage order fulfillment,\\&& including picking, 
+packing, and \\&&shipping of products.\\
+    \hline
+    6&Order Status Tracking&Provide customers with \\&&real-time updates on 
+their order status, including \\&&shipment tracking information.\\
+    \hline
+    7&Sales Reports& Provide sales reports, including \\&& revenue, units sold,
+best-selling products,  \\&&and sales trends.\\
+    \hline
+    8&Supplier Performance Evaluation&Evaluate supplier performance\\&& based on
+ factors like delivery times, \\&&product quality, and pricing competitiveness.\\
+   \hline
+  \end{tabular}%
+  
+\end{table}
+\end{center}
+ \subsection{Non-functional requirement}
+
+\begin{itemize}
+\item Client can pay through Online mode of payment.
+\item Feedback to system by user.
+\end{itemize}
+
+\newpage
+
+\subsection{Software and hardware Requirement}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{4cm}|p{8cm}|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{ Hardware Requirements}} \\
+        \hline
+        Description & Alternatives (If available) \\
+        \hline
+        Server or Cloud Hosting & Not Applicable \\
+        Sufficient RAM and CPU & Not Applicable \\
+        \hline
+    \end{tabular}
+    \caption{Hardware Requirements}
+    \label{tab:hardware-requirements}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|p{4cm}|p{8cm}|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Software Requirements}} \\
+        \hline
+        \textbf{Sr.No.} & \textbf{Description} & \textbf{Alternatives (If available)} \\
+        \hline
+        1 & Windows 7/8/10 with MS-Office & Not Applicable \\
+        2 & Web framework & MS-Access \\
+        3 & API's & Not Applicable \\
+        4 & Database & Not Applicable \\
+        5 & Machine Learning Libraries & Not Applicable \\
+        \hline
+    \end{tabular}
+    \caption{Software Requirements}
+    \label{tab:software-requirements}
+\end{table}
+
+\newpage
+
+\section{Requirement Analysis}
+\begin{itemize}
+\item Inventory Tracking:
+\subitem Real-time Inventory Updates: The system should update inventory levels in real-time as products are added, sold, or returned.
+\subitem Stock Movement Tracking: Track the movement of stock, including transfers between locations, adjustments for damages or losses, and returns from customers.
+\subitem Batch and Serial Number Tracking: Ability to track inventory by batch numbers or serial numbers for traceability and quality control.
+\item Order Management:
+\subitem Order Processing: Process customer orders efficiently, including order entry, validation, and confirmation.
+\subitem Order Fulfillment: Manage order fulfillment, including picking, packing, and shipping of products.
+\subitem Order Status Tracking: Provide customers with real-time updates on their order status, including shipment tracking information.
+\item Reporting and Analytics:
+\subitem Inventory Reports: Generate reports on inventory levels, stock turnover, aging stock, and stock value.
+\subitem Sales Reports: Provide sales reports, including revenue, units sold, best-selling products, and sales trends.
+\subitem Supplier Performance: Track supplier performance metrics such as delivery times, quality, and pricing.
+\item User Management:
+\subitem User Roles and Permissions: Define user roles (e.g., admin, manager, warehouse staff) with specific permissions and access levels.
+\subitem User Authentication: Secure user authentication mechanisms such as passwords, multi-factor authentication, and role-based access control (RBAC).
+\item Supplier Management:
+\subitem Supplier Information: Maintain a database of supplier information, including contact details, product catalog, and pricing agreements.
+\subitem Supplier Performance Evaluation: Evaluate supplier performance based on factors like delivery times, product quality, and pricing competitiveness.
+\item Stock Replenishment:
+\subitem Reorder Point Management: Set reorder points for products to automatically trigger reorder requests when stock levels fall below a specified threshold.
+\subitem Purchase Order Generation: Generate purchase orders for suppliers based on reorder points, stock levels, and lead times.
+
+\end{itemize}
+
+\newpage
+\section{Flowchart}
+
+\begin{tikzpicture}[node distance=1.9cm, every node/.style={draw, shape=rectangle}]
+
+% Define nodes
+\node (Start) [fill=blue!20]{Start};
+\node (List) [below of=Start,fill=blue!20] {List of Production};
+\node (Shows) [below of=List,fill=blue!20] {Shows summation};
+\node (Processing) [aspect=2, below of=Shows, yshift=-0.5cm,fill=blue!20] {Processing};
+\node(encode)[below of= Processing,fill=green!20]{Encodes monthly output};
+\node (Emp) [below of=encode,fill=blue!20] {Shows Employee Output};
+\node(con)[below of=Emp,fill=blue!20]{Confirming Transaction};
+
+\node(salary)[below of = con]{Recives Salary Notification};
+\node (acq) [below of=salary,fill=green!20] {Acquires Salary};
+\node(tran)[below of = acq,fill=blue!20]{Transaction Recorded};
+\node(detail)[below of = tran,fill=blue!20]{Show Detailed Information};
+\node (End) [below of=detail,fill=blue!20] {End};
+
+\node(mon)[xshift=10cm,fill=yellow!20]{Monitar company production};
+\node(cal)[below of = mon,fill=yellow!20]{Calculate income and expenses};
+\node(check)[below of = cal,fill=yellow!20]{Checks employees performances};
+\node (assing) [below of=encode,fill=yellow!20,xshift=10cm] {Assings salary according to thier outputs};
+\node(recie)[below of=tran,xshift=10cm,fill=yellow!20]{Recieves overall recordes and income};
+
+
+\node(salary)[below of = con,fill=green!20]{Recives Salary Notification};
+
+% Define arrows
+\draw [-latex,bend left=45]  (Start) -- (mon);
+\draw [->] (mon) -- (List);
+\draw [->] (List) -- (cal);
+\draw [->](cal)--(Shows);
+\draw [->](Shows)--(check);
+\draw [->](check)--(Processing);
+\draw [->](Processing)--(encode);
+\draw [->](encode)--(Emp);
+\draw [->](Emp)--(assing);
+\draw [->](assing)--(con);
+\draw [->](con)--(salary);
+\draw [->](salary)--(acq);
+\draw [->](acq)--(tran);
+\draw [->](tran)--(detail);
+\draw [->](detail)--(recie);
+\draw [->](recie)--(End);
+\end{tikzpicture}
+
+\newpage
+
+\section{Usecase Diagram}
+\includegraphics{use1}
+
+\newpage
+
+\section{Data Flow Diagram}
+\subsection{DFD0}
+
+\includegraphics[scale=0.7]{0.png}
+
+\subsection{DFD1}
+\includegraphics[scale=0.7]{1.png}
+\subsection{DFD2}
+\includegraphics[scale=0.7]{2.png}
+
+\newpage
+
+
+\cite{fetrina2017inventory}
+\bibliographystyle{plain}
+\bibliography{refe}
+
+
+\end{document}
+
+
+
